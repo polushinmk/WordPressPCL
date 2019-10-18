@@ -34,7 +34,7 @@
             </summary>
             <param name="PostID">Post id</param>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of comments for post</returns>
         </member>
         <member name="M:WordPressPCL.Client.Comments.GetAllCommentsForPost(System.Int32,System.Boolean,System.Boolean)">
@@ -43,7 +43,7 @@
             </summary>
             <param name="PostID">Post id</param>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of comments for post</returns>
         </member>
         <member name="M:WordPressPCL.Client.Comments.Delete(System.Int32,System.Boolean)">
@@ -56,7 +56,7 @@
         </member>
         <member name="T:WordPressPCL.Client.CRUDOperation`2">
             <summary>
-            Base class for CRUDOperation with default implementation of all neccesary operations
+            Base class for CRUDOperation with default implementation of all necessary operations
             </summary>
             <typeparam name="TClass">DTO class</typeparam>
             <typeparam name="QClass">QueryBuilder class</typeparam>
@@ -88,7 +88,7 @@
             <param name="HttpHelper">reference to HttpHelper class for interaction with HTTP</param>
             <param name="defaultPath">path to site, EX. http://demo.com/wp-json/ </param>
             <param name="methodPath">path to endpoint, EX. posts</param>
-            <param name="forceDeletion">is objectes must be force deleted</param>
+            <param name="forceDeletion">is objects must be force deleted</param>
         </member>
         <member name="M:WordPressPCL.Client.CRUDOperation`2.Create(`0)">
             <summary>
@@ -109,7 +109,7 @@
             Get latest
             </summary>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>Entity by Id</returns>
         </member>
         <member name="M:WordPressPCL.Client.CRUDOperation`2.GetAll(System.Boolean,System.Boolean)">
@@ -117,7 +117,7 @@
             Get All
             </summary>
             <param name="embed">Include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of all result</returns>
         </member>
         <member name="M:WordPressPCL.Client.CRUDOperation`2.GetByID(System.Object,System.Boolean,System.Boolean)">
@@ -126,7 +126,7 @@
             </summary>
             <param name="ID">ID</param>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>Entity by Id</returns>
         </member>
         <member name="M:WordPressPCL.Client.CRUDOperation`2.Query(`1,System.Boolean)">
@@ -134,7 +134,7 @@
             Create a parametrized query and get a result
             </summary>
             <param name="queryBuilder">Query builder with specific parameters</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of filtered result</returns>
         </member>
         <member name="M:WordPressPCL.Client.CRUDOperation`2.Update(`0)">
@@ -224,7 +224,7 @@
             Get latest
             </summary>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>Latest media items</returns>
         </member>
         <member name="M:WordPressPCL.Client.Media.GetAll(System.Boolean,System.Boolean)">
@@ -232,7 +232,7 @@
             Get All
             </summary>
             <param name="embed">Include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of all result</returns>
         </member>
         <member name="M:WordPressPCL.Client.Media.GetByID(System.Object,System.Boolean,System.Boolean)">
@@ -241,7 +241,7 @@
             </summary>
             <param name="ID">ID</param>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>Entity by Id</returns>
         </member>
         <member name="M:WordPressPCL.Client.Media.Query(WordPressPCL.Utility.MediaQueryBuilder,System.Boolean)">
@@ -249,7 +249,7 @@
             Create a parametrized query and get a result
             </summary>
             <param name="queryBuilder">Query builder with specific parameters</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of filtered result</returns>
         </member>
         <member name="M:WordPressPCL.Client.Media.Update(WordPressPCL.Models.MediaItem)">
@@ -276,8 +276,8 @@
             Get pages by its author
             </summary>
             <param name="authorId">Author id</param>
-            <param name="embed">includ embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="embed">include embed info</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of pages</returns>
         </member>
         <member name="M:WordPressPCL.Client.Pages.GetPagesBySearch(System.String,System.Boolean,System.Boolean)">
@@ -286,7 +286,7 @@
             </summary>
             <param name="searchTerm">Search term</param>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of pages</returns>
         </member>
         <member name="M:WordPressPCL.Client.Pages.Delete(System.Int32,System.Boolean)">
@@ -295,7 +295,7 @@
             </summary>
             <param name="ID">Page id</param>
             <param name="force">force deletion</param>
-            <returns>Result of opertion</returns>
+            <returns>Result of operation</returns>
         </member>
         <member name="T:WordPressPCL.Client.PostRevisions">
             <summary>
@@ -322,7 +322,7 @@
             Get latest
             </summary>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>Latest PostRevisions</returns>
         </member>
         <member name="M:WordPressPCL.Client.PostRevisions.GetAll(System.Boolean,System.Boolean)">
@@ -330,7 +330,7 @@
             Get All
             </summary>
             <param name="embed">Include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of all result</returns>
         </member>
         <member name="M:WordPressPCL.Client.PostRevisions.GetByID(System.Object,System.Boolean,System.Boolean)">
@@ -339,7 +339,7 @@
             </summary>
             <param name="ID">ID</param>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>Entity by Id</returns>
         </member>
         <member name="T:WordPressPCL.Client.Posts">
@@ -358,8 +358,8 @@
             <summary>
             Get sticky posts
             </summary>
-            <param name="embed">includ embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="embed">include embed info</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of posts</returns>
         </member>
         <member name="M:WordPressPCL.Client.Posts.GetPostsByCategory(System.Int32,System.Boolean,System.Boolean)">
@@ -367,8 +367,8 @@
             Get posts by category
             </summary>
             <param name="categoryId">Category Id</param>
-            <param name="embed">includ embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="embed">include embed info</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of posts</returns>
         </member>
         <member name="M:WordPressPCL.Client.Posts.GetPostsByTag(System.Int32,System.Boolean,System.Boolean)">
@@ -376,8 +376,8 @@
             Get posts by tag
             </summary>
             <param name="tagId">Tag Id</param>
-            <param name="embed">includ embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="embed">include embed info</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of posts</returns>
         </member>
         <member name="M:WordPressPCL.Client.Posts.GetPostsByAuthor(System.Int32,System.Boolean,System.Boolean)">
@@ -385,8 +385,8 @@
             Get posts by its author
             </summary>
             <param name="authorId">Author id</param>
-            <param name="embed">includ embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="embed">include embed info</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of posts</returns>
         </member>
         <member name="M:WordPressPCL.Client.Posts.GetPostsBySearch(System.String,System.Boolean,System.Boolean)">
@@ -395,7 +395,7 @@
             </summary>
             <param name="searchTerm">Search term</param>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of posts</returns>
         </member>
         <member name="M:WordPressPCL.Client.Posts.Delete(System.Int32,System.Boolean)">
@@ -404,7 +404,7 @@
             </summary>
             <param name="ID">Post id</param>
             <param name="force">force deletion</param>
-            <returns>Result of opertion</returns>
+            <returns>Result of operation</returns>
         </member>
         <member name="M:WordPressPCL.Client.Posts.Revisions(System.Int32)">
             <summary>
@@ -430,7 +430,7 @@
             Get latest Post Statuses
             </summary>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>Entity by Id</returns>
         </member>
         <member name="M:WordPressPCL.Client.PostStatuses.GetAll(System.Boolean,System.Boolean)">
@@ -438,7 +438,7 @@
             Get All
             </summary>
             <param name="embed">Include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of all result</returns>
         </member>
         <member name="M:WordPressPCL.Client.PostStatuses.GetByID(System.Object,System.Boolean,System.Boolean)">
@@ -447,7 +447,7 @@
             </summary>
             <param name="ID">ID</param>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>Entity by Id</returns>
         </member>
         <member name="T:WordPressPCL.Client.PostTypes">
@@ -467,7 +467,7 @@
             Get latest
             </summary>
             <param name="embed">Include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of latest PostTypes</returns>
         </member>
         <member name="M:WordPressPCL.Client.PostTypes.GetAll(System.Boolean,System.Boolean)">
@@ -475,7 +475,7 @@
             Get All
             </summary>
             <param name="embed">Include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of all PostTypes</returns>
         </member>
         <member name="M:WordPressPCL.Client.PostTypes.GetByID(System.Object,System.Boolean,System.Boolean)">
@@ -484,7 +484,7 @@
             </summary>
             <param name="ID">ID</param>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>Entity by Id</returns>
         </member>
         <member name="T:WordPressPCL.Client.Tags">
@@ -516,7 +516,7 @@
             Get latest
             </summary>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>Get latest taxonomies</returns>
         </member>
         <member name="M:WordPressPCL.Client.Taxonomies.GetAll(System.Boolean,System.Boolean)">
@@ -524,7 +524,7 @@
             Get All
             </summary>
             <param name="embed">Include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of all result</returns>
         </member>
         <member name="M:WordPressPCL.Client.Taxonomies.GetByID(System.Object,System.Boolean,System.Boolean)">
@@ -533,7 +533,7 @@
             </summary>
             <param name="ID">ID</param>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>Entity by Id</returns>
         </member>
         <member name="M:WordPressPCL.Client.Taxonomies.Query(WordPressPCL.Utility.TaxonomiesQueryBuilder,System.Boolean)">
@@ -541,7 +541,7 @@
             Create a parametrized query and get a result
             </summary>
             <param name="queryBuilder">Query builder with specific parameters</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of filtered result</returns>
         </member>
         <member name="T:WordPressPCL.Client.Users">
@@ -568,7 +568,7 @@
             Get latest
             </summary>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>Get latest users</returns>
         </member>
         <member name="M:WordPressPCL.Client.Users.GetAll(System.Boolean,System.Boolean)">
@@ -576,7 +576,7 @@
             Get All
             </summary>
             <param name="embed">Include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of all result</returns>
         </member>
         <member name="M:WordPressPCL.Client.Users.GetByID(System.Object,System.Boolean,System.Boolean)">
@@ -585,7 +585,7 @@
             </summary>
             <param name="ID">ID</param>
             <param name="embed">include embed info</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>Entity by Id</returns>
         </member>
         <member name="M:WordPressPCL.Client.Users.Query(WordPressPCL.Utility.UsersQueryBuilder,System.Boolean)">
@@ -593,7 +593,7 @@
             Create a parametrized query and get a result
             </summary>
             <param name="queryBuilder">Query builder with specific parameters</param>
-            <param name="useAuth">Send request with authenication header</param>
+            <param name="useAuth">Send request with authentication header</param>
             <returns>List of filtered result</returns>
         </member>
         <member name="M:WordPressPCL.Client.Users.Update(WordPressPCL.Models.User)">
@@ -688,6 +688,15 @@
             <param name="useAuth">Is use auth header</param>
             <returns>requested object</returns>
         </member>
+        <member name="M:WordPressPCL.Interfaces.IReatem.Boolean,System.Boolean)">
+            <summary>
+            Get object by Id
+            </summary>
+            <param name="ID">Object Id</param>
+            <param name="embed">Is use embed info</param>
+            <param name="useAuth">Is use auth header</param>
+            <returns>requested object</returns>
+        </member>
         <member name="M:WordPressPCL.Interfaces.IReadOperation`1.GetAll(System.Boolean,System.Boolean)">
             <summary>
             Get all objects
@@ -711,7 +720,7 @@
         </member>
         <member name="T:WordPressPCL.Models.AuthMethod">
             <summary>
-            Authentcation Methods
+            Authentication Methods
             <para> JWT - recommended AUTH method</para>
             </summary>
         </member>
@@ -790,18 +799,7 @@
             Number of published posts for the term.
             </summary>
             <remarks>
-            Read only
-            Context: view, edit
-            </remarks>
-        </member>
-        <member name="P:WordPressPCL.Models.Category.Description">
-            <summary>
-            HTML description of the term.
-            </summary>
-            <remarks>Context: view, edit</remarks>
-        </member>
-        <member name="P:WordPressPCL.Models.Category.Parent">
-            <summary>
+            Read
             The parent term ID.
             </summary>
             <remarks>Context: view, edit</remarks>
@@ -951,13 +949,13 @@
         </member>
         <member name="T:WordPressPCL.Models.CommentThreaded">
             <summary>
-            An extension class for Comment that holds a depth porperty
+            An extension class for Comment that holds a depth property
             for displaying threaded comments
             </summary>
         </member>
         <member name="P:WordPressPCL.Models.CommentThreaded.Depth">
             <summary>
-            The depht of a comment
+            The depth of a comment
             0 is a top level comments without parent
             </summary>
         </member>
@@ -1442,6 +1440,31 @@
             Bad request data info
             </summary>
         </member>
+        <member name="T:WordPressPCL.Models.WPUnexpectedException">
+            <summary>
+            An exception resulting from a malformed WP response from a
+            WP REST call, where the response is still a valid (but not
+            successful) HTTP response. For example, the response returned
+            from an endpoint that is not a WP REST endpoint
+            </summary>
+        </member>
+        <member name="M:WordPressPCL.Models.WPUnexpectedException.#ctor(System.Net.Http.HttpResponseMessage,System.String)">
+            <summary>
+            Construct a WPUnexpectedException from a response
+            </summary>
+            <param name="response">The raw response</param>
+            <param name="resonseBody">The response body, if any</param>     
+        </member>
+        <member name="P:WordPressPCL.Models.WPUnexpectedException.Response">
+            <summary>
+            The response that triggered the error
+            </summary>
+        </member>
+        <member name="P:WordPressPCL.Models.WPUnexpectedException.ResponseBody">
+            <summary>
+            The response body (if any) that was returned with the error status
+            </summary>
+        </member>
         <member name="T:WordPressPCL.Models.ImageMeta">
             <summary>
             Meta info (EXIF) of image media
@@ -1757,7 +1780,7 @@
         </member>
         <member name="M:WordPressPCL.Models.MediaItem.#ctor">
             <summary>
-            Paremeterless constructor
+            Parameterless constructor
             </summary>
         </member>
         <member name="T:WordPressPCL.Models.MediaSize">
@@ -1957,7 +1980,7 @@
         </member>
         <member name="T:WordPressPCL.Models.Post">
             <summary>
-            Type respresents Entity Post of WP REST API
+            Type represents Entity Post of WP REST API
             </summary>
         </member>
         <member name="P:WordPressPCL.Models.Post.Date">
@@ -2151,7 +2174,7 @@
         </member>
         <member name="T:WordPressPCL.Models.PostRevision">
             <summary>
-            Type respresents Entity Post Revision of WP REST API
+            Type represents Entity Post Revision of WP REST API
             </summary>
         </member>
         <member name="P:WordPressPCL.Models.PostRevision.Author">
@@ -2247,7 +2270,7 @@
         </member>
         <member name="M:WordPressPCL.Models.PostRevision.#ctor">
             <summary>
-            DefaultCOnstructor
+            Default Constructor
             </summary>
         </member>
         <member name="T:WordPressPCL.Models.PostStatus">
@@ -2453,7 +2476,7 @@
         </member>
         <member name="P:WordPressPCL.Models.Settings.DefaultCommentStatus">
             <summary>
-            Default Commment Status
+            Default Comment Status
             </summary>
         </member>
         <member name="T:WordPressPCL.Models.RenderedRawBase">
@@ -3185,7 +3208,7 @@
         </member>
         <member name="T:WordPressPCL.Utility.CustomCapabilitiesJsonConverter">
             <summary>
-            Custom JSON converter to convert string values to boolean in capabitilities and extra_capabilities properties
+            Custom JSON converter to convert string values to boolean in capabilities and extra_capabilities properties
             <see cref="P:WordPressPCL.Models.User.Capabilities"/>
             <see cref="P:WordPressPCL.Models.User.ExtraCapabilities"/>
             </summary>
@@ -3198,7 +3221,7 @@
         </member>
         <member name="T:WordPressPCL.Utility.HttpHelper">
             <summary>
-            Helper class incapsulates common HTTP requests methods
+            Helper class encapsulates common HTTP requests methods
             </summary>
         </member>
         <member name="P:WordPressPCL.Utility.HttpHelper.JWToken">
@@ -3208,7 +3231,7 @@
         </member>
         <member name="P:WordPressPCL.Utility.HttpHelper.HttpResponsePreProcessing">
             <summary>
-            Function called when a HttpRequest response is readed
+            Function called when a HttpRequest response is read
             Executed before trying to convert json content to a TClass object.
             </summary>
         </member>
@@ -3228,7 +3251,7 @@
             Constructor
             <paramref name="WordpressURI"/>
             </summary>
-            <param name="WordpressURI">base WP RESR API endpoint EX. http://demo.com/wp-json/ </param>
+            <param name="WordpressURI">base WP REST API endpoint EX. http://demo.com/wp-json/ </param>
         </member>
         <member name="T:WordPressPCL.Utility.MediaQueryBuilder">
             <summary>
@@ -3661,16 +3684,16 @@
         </member>
         <member name="T:WordPressPCL.Utility.ThreadedCommentsHelper">
             <summary>
-            Helper class to creat threaded comment views
+            Helper class to create threaded comment views
             </summary>
         </member>
         <member name="M:WordPressPCL.Utility.ThreadedCommentsHelper.GetThreadedComments(System.Collections.Generic.IEnumerable{WordPressPCL.Models.Comment},System.Int32,System.Boolean)">
             <summary>
             This method returns the comments sorted for a threaded view (oldest first)
-            inlcuding the depth of a comment
+            including the depth of a comment
             </summary>
             <param name="comments">list of comments which will be ordered</param>
-            <param name="maxDepth">max hierachy depth</param>
+            <param name="maxDepth">max hierarchy depth</param>
             <param name="isDescending">order by descending</param>
         </member>
         <member name="M:WordPressPCL.Utility.ThreadedCommentsHelper.ToThreaded(System.Collections.Generic.IEnumerable{WordPressPCL.Models.Comment},System.Boolean)">
@@ -3747,7 +3770,7 @@
         </member>
         <member name="P:WordPressPCL.WordPressClient.HttpResponsePreProcessing">
             <summary>
-            Function called when a HttpRequest response to WordPress APIs are readed
+            Function called when a HttpRequest response to WordPress APIs are read
             Executed before trying to convert json content to a TClass object.
             </summary>
         </member>
@@ -3857,7 +3880,21 @@
         </member>
         <member name="M:WordPressPCL.WordPressClient.SetJWToken(System.String)">
             <summary>
-            Sets an exisitng JWToken
+            Sets an existing JWToken
+            </summary>
+            <param name="token"></param>
+        </member>
+        <member name="M:WordPressPCL.WordPressClient.GetToken">
+            <summary>
+            Gets the JWToken from the client
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
+ystem.String)">
+            <summary>
+            Sets an existing JWToken
             </summary>
             <param name="token"></param>
         </member>

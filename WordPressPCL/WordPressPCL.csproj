@@ -8,16 +8,33 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Thomas Pentenrieder</Authors>
     <Company>medienstudio.net</Company>
-    <Description>This is a portable library for consuimg the WordPress REST-API in (almost) any C# application.</Description>
+    <Description>This is a portable library for consuming the WordPress REST-API in (almost) any C# application.</Description>
     <PackageProjectUrl>https://github.com/wp-net/WordPressPCL</PackageProjectUrl>
     <RepositoryUrl>https://github.com/wp-net/WordPressPCL</RepositoryUrl>
     <PackageTags>WordPress REST API</PackageTags>
     <RepositoryType>GitHub</RepositoryType>
-    <AssemblyVersion>1.4.6.0</AssemblyVersion>
-    <FileVersion>1.4.6.0</FileVersion>
-    <Version>1.4.6</Version>
+    <AssemblyVersion>1.6.2.0</AssemblyVersion>
+    <FileVersion>1.6.2.0</FileVersion>
+    <Version>1.6.2</Version>
     <PackageLicenseUrl>https://github.com/wp-net/WordPressPCL/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageReleaseNotes>V1.4.6
+    <PackageReleaseNotes>V1.6.2
+- Clean up file stream after upload #166
+- Added .kmz &amp; .kml Mime Types #162
+
+V1.6.1
+- Fix for #147 where Capabilities might contain strings instead of bool
+
+V1.6.0-beta1
+- marking all Meta properties as dynamic as the structure seems to be very volatile
+
+V1.5.1
+- Make height &amp; width optional in MediaSizes (#143)
+
+V1.5.0
+- Enhanced Error handling
+https://github.com/wp-net/WordPressPCL/issues/138
+
+V1.4.6
 - Bugfix: Add DefaultValueHandling to Comment Status property 
 
 V1.4.5
@@ -57,13 +74,14 @@ V1.2
 - added method to get all comments for a post id
 - fixed some async issues for better performance
 - added logout method</PackageReleaseNotes>
-    <Copyright>© Thomas Pentenrieder | 2018</Copyright>
+    <Copyright>© Thomas Pentenrieder | 2019</Copyright>
     <ApplicationIcon />
     <OutputTypeEx>library</OutputTypeEx>
     <StartupObject />
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 </Project>

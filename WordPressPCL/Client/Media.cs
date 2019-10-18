@@ -43,11 +43,13 @@ namespace WordPressPCL.Client
         /// <returns>Created media object</returns>
         public async Task<MediaItem> Create(Stream fileStream, string filename)
         {
-            StreamContent content = new StreamContent(fileStream);
-            string extension = filename.Split('.').Last();
-            content.Headers.TryAddWithoutValidation("Content-Type", MimeTypeHelper.GetMIMETypeFromExtension(extension));
-            content.Headers.TryAddWithoutValidation("Content-Disposition", $"attachment; filename={filename}");
-            return (await _httpHelper.PostRequest<MediaItem>($"{_defaultPath}{_methodPath}", content).ConfigureAwait(false)).Item1;
+            using (StreamContent content = new StreamContent(fileStream))
+            {
+                string extension = filename.Split('.').Last();
+                content.Headers.TryAddWithoutValidation("Content-Type", MimeTypeHelper.GetMIMETypeFromExtension(extension));
+                content.Headers.TryAddWithoutValidation("Content-Disposition", $"attachment; filename={filename}");
+                return (await _httpHelper.PostRequest<MediaItem>($"{_defaultPath}{_methodPath}", content).ConfigureAwait(false)).Item1;
+            }
         }
 
 #if NETSTANDARD2_0
@@ -61,11 +63,13 @@ namespace WordPressPCL.Client
         {
             if (File.Exists(filePath))
             {
-                StreamContent content = new StreamContent(File.OpenRead(filePath));
-                string extension = filename.Split('.').Last();
-                content.Headers.TryAddWithoutValidation("Content-Type", MimeTypeHelper.GetMIMETypeFromExtension(extension));
-                content.Headers.TryAddWithoutValidation("Content-Disposition", $"attachment; filename={filename}");
-                return (await _httpHelper.PostRequest<MediaItem>($"{_defaultPath}{_methodPath}", content).ConfigureAwait(false)).Item1;
+                using (StreamContent content = new StreamContent(File.OpenRead(filePath)))
+                {
+                    string extension = filename.Split('.').Last();
+                    content.Headers.TryAddWithoutValidation("Content-Type", MimeTypeHelper.GetMIMETypeFromExtension(extension));
+                    content.Headers.TryAddWithoutValidation("Content-Disposition", $"attachment; filename={filename}");
+                    return (await _httpHelper.PostRequest<MediaItem>($"{_defaultPath}{_methodPath}", content).ConfigureAwait(false)).Item1;
+                }
             }
             else
             {
@@ -88,7 +92,7 @@ namespace WordPressPCL.Client
         /// Get latest
         /// </summary>
         /// <param name="embed">include embed info</param>
-        /// <param name="useAuth">Send request with authenication header</param>
+        /// <param name="useAuth">Send request with authentication header</param>
         /// <returns>Latest media items</returns>
         public Task<IEnumerable<MediaItem>> Get(bool embed = false, bool useAuth = false)
         {
@@ -99,7 +103,7 @@ namespace WordPressPCL.Client
         /// Get All
         /// </summary>
         /// <param name="embed">Include embed info</param>
-        /// <param name="useAuth">Send request with authenication header</param>
+        /// <param name="useAuth">Send request with authentication header</param>
         /// <returns>List of all result</returns>
         public async Task<IEnumerable<MediaItem>> GetAll(bool embed = false, bool useAuth = false)
         {
@@ -122,7 +126,7 @@ namespace WordPressPCL.Client
         /// </summary>
         /// <param name="ID">ID</param>
         /// <param name="embed">include embed info</param>
-        /// <param name="useAuth">Send request with authenication header</param>
+        /// <param name="useAuth">Send request with authentication header</param>
         /// <returns>Entity by Id</returns>
         public Task<MediaItem> GetByID(object ID, bool embed = false, bool useAuth = false)
         {
@@ -133,7 +137,7 @@ namespace WordPressPCL.Client
         /// Create a parametrized query and get a result
         /// </summary>
         /// <param name="queryBuilder">Query builder with specific parameters</param>
-        /// <param name="useAuth">Send request with authenication header</param>
+        /// <param name="useAuth">Send request with authentication header</param>
         /// <returns>List of filtered result</returns>
         public Task<IEnumerable<MediaItem>> Query(MediaQueryBuilder queryBuilder, bool useAuth = false)
         {
